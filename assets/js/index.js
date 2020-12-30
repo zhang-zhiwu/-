@@ -1,5 +1,5 @@
 $(function () {
-    grtUserInfo()
+    getUserInfo()
     $('#btnLogout').on('click',function(){
         const{layer} = layui
         layer.confirm('确定退出登录',{icon:3,title:'提示'},function(){
@@ -12,7 +12,7 @@ $(function () {
         })
     })
 })
-function grtUserInfo() {
+function getUserInfo() {
     $.ajax({
         method: 'GET',
         url: '/my/userinfo',
